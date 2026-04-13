@@ -34,7 +34,7 @@ RESPONSIBLE_BY_PROJECT = {
 }
 
 
-class ReportApp(ft.UserControl):
+class ReportApp(ft.Column):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
