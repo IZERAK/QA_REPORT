@@ -1,71 +1,69 @@
-# Система отчётности сотрудников (Flet Desktop App)
+# QaReport app
 
-Desktop-приложение на фреймворке Flet для создания и управления отчётами сотрудников.
+## Run the app
 
-## 📋 Возможности
+### uv
 
-- **Левая панель навигации** с кнопками настроек и переключения темы
-- **Настройки по умолчанию** для полей отчёта:
-  - Сотрудник (выбор из списка + свой ввод)
-  - Отдел (выбор из списка + свой ввод)
-  - Проект (выбор из списка + свой ввод)
-  - Тип работ (выбор из списка + свой ввод)
-  - Ответственный (зависит от проекта, выбор из списка + свой ввод)
-
-- **Главная форма отчёта**:
-  - Сотрудник, Отдел
-  - Неделя (автоматически)
-  - Дата начала/окончания (календарь)
-  - Проект, Задача (большое текстовое поле)
-  - Тип работы, План/Факт (часы)
-  - Статус с валидацией комментария
-  - Ответственный (автоподстановка от проекта)
-
-- **Дополнительные опции**:
-  - Очищать поля при создании
-  - Добавить планы на следующую неделю
-  - Генерация отчёта
-
-## 🚀 Быстрый старт
-
-### Локальный запуск
+Run as a desktop app:
 
 ```bash
-# Установка зависимостей
-pip install -r requirements.txt
-
-# Запуск приложения
-python report_app.py
+uv run flet run
 ```
 
-### Запуск в GitHub Codespaces
+Run as a web app:
 
-1. Откройте репозиторий в GitHub Codespaces
-2. Откройте терминал
-3. Выполните команды:
 ```bash
-pip install -r requirements.txt
-python report_app.py
+uv run flet run --web
 ```
 
-## 📦 Зависимости
+For more details on running the app, refer to the [Getting Started Guide](https://flet.dev/docs/).
 
-- Python 3.8+
-- Flet
+## Build the app
 
-## ⚙️ Настройка
+### Android
 
-При первом запуске создаётся файл `default_settings.json` для хранения настроек по умолчанию.
+```bash
+flet build apk -v
+```
 
-## 🎨 Темы
+For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
 
-Приложение поддерживает светлую и тёмную тему. Переключение через кнопку в левой панели.
+### iOS
 
-## 📝 Валидация
+```bash
+flet build ipa -v
+```
 
-- Комментарий обязателен для статусов: "Выполнено частично", "Не начато", "Задержано", "Отменено"
-- При выборе проекта автоматически подставляется ответственный
+For more details on building and signing `.ipa`, refer to the [iOS Packaging Guide](https://flet.dev/docs/publish/ios/).
 
-## 📄 Лицензия
+### macOS
 
-MIT
+```bash
+flet build macos -v
+```
+
+For more details on building macOS package, refer to the [macOS Packaging Guide](https://flet.dev/docs/publish/macos/).
+
+### Linux
+
+```bash
+flet build linux -v
+```
+
+For more details on building Linux package, refer to the [Linux Packaging Guide](https://flet.dev/docs/publish/linux/).
+
+### Windows
+
+```bash
+flet build windows -v
+```
+
+For more details on building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).
+
+### Web
+
+```bash
+flet build web -v
+```
+
+For more details on building Web app, refer to the [Web Packaging Guide](https://flet.dev/docs/publish/web/).
